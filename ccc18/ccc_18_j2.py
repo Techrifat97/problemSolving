@@ -15,8 +15,11 @@ while True:
         for index in range(action):
             item = song_list.pop(4)
             song_list.insert(0,item)
+            
     elif button == 3:
         song_list[0],song_list[1] = song_list[1], song_list[0]
+        
     elif button == 4 and action == 1:
         break
+    
 print(' '.join(song_list))

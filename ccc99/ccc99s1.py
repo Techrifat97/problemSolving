@@ -34,19 +34,16 @@ def turn_king(index,player):
     global player_b_points, player_a_points
     if (index + 3 ) <= 51:
         count = 1
-        validation = 0
-        
         while count != 4:
             if card_list[index + count] in HIGH_CARDS:
-                validation += 1
+                return
             count += 1
-        
-        if validation == 0:
-            print(f"Player {player} scores 3 point(s).")
-            if player == 'A':
-                player_a_points += 3
-            elif player == 'B':
-                player_b_points += 3
+            
+        print(f"Player {player} scores 3 point(s).")
+        if player == 'A':
+            player_a_points += 3
+        elif player == 'B':
+            player_b_points += 3
 
 def turn_queen(index,player):
     global player_b_points, player_a_points
